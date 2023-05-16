@@ -4,13 +4,18 @@ var multiplayer_peer = ENetMultiplayerPeer.new() #multiplayer_peer manages serve
 
 @onready var id = get_node("/root/Singleton")
 @onready var menu = $Menu
+@onready var label = $Label
 
+func _on_ready():
+	label.visible = false
 
 func _on_join_pressed():
 	var port = str($Menu/Port.text).to_int() #converts the port to string
 	multiplayer_peer.create_client("localhost", port) #connects to the address "localhost" using the port
 	multiplayer.multiplayer_peer = multiplayer_peer #enables RPC system
 	menu.visible = false #hides the menu
+	label.text = "Client"
+	label.visible = true
 
 
 func _on_host_pressed():
@@ -19,6 +24,8 @@ func _on_host_pressed():
 	multiplayer.multiplayer_peer = multiplayer_peer 
 	multiplayer_peer.peer_connected.connect(func(id): add_player_character(id)) #adds a player character once a client has connected
 	menu.visible = false
+	label.text = "Host"
+	label.visible = true
 	add_player_character()
 
 
