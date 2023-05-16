@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://hj2fohie3xms"
+path="res://.godot/imported/Character_001.png-046555b6ee60c37d77975b0a01577a84.res"
+
+[deps]
+
+source_file="res://RGW - Sprites (Free)/16x16/Character_001.png"
+dest_files=["res://.godot/imported/Character_001.png-046555b6ee60c37d77975b0a01577a84.res"]
+
+[params]
+
+create_from=0
+threshold=0.5
