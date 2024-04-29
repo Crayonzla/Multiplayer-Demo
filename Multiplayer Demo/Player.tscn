@@ -98,10 +98,10 @@ size = Vector2(16, 19.5)
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_ohxxn"]
 properties/0/path = NodePath(".:position")
 properties/0/spawn = true
-properties/0/sync = true
+properties/0/replication_mode = 1
 properties/1/path = NodePath("../AnimationPlayer:current_animation")
 properties/1/spawn = true
-properties/1/sync = true
+properties/1/replication_mode = 1
 
 [node name="Player" type="Area2D"]
 scale = Vector2(5, 5)
@@ -113,10 +113,10 @@ hframes = 3
 vframes = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "F_Walk"
 libraries = {
 "": SubResource("AnimationLibrary_7mpkm")
 }
+autoplay = "F_Walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 5.25)
